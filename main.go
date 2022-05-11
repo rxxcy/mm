@@ -10,9 +10,6 @@ import (
 	"strconv"
 	"strings"
 	"sync"
-	"syscall"
-	"unsafe"
-
 	"github.com/PuerkitoBio/goquery"
 )
 
@@ -187,23 +184,7 @@ func downloadImage(url string, path string) {
 
 func init() {
 	fmt.Println("初始中...")
-	// url := "http://nxzytmax.hk3.20212021.ml"
-	// response, err := http.Get(url)
-	// if err != nil {
-	// 	fmt.Println("初始化失败了 -_-! ")
-	// 	os.Exit(0)
-	// 	return
-	// }
-	// defer response.Body.Close()
-	// body, err := ioutil.ReadAll(response.Body)
-	// API_BASE_URL = string(body)
-
-	title := "麦克斯韦方程组的证明"
-	kernel32, _ := syscall.LoadLibrary(`kernel32.dll`)
-	sct, _ := syscall.GetProcAddress(kernel32, `SetConsoleTitleW`)
-	syscall.Syscall(sct, 1, uintptr(unsafe.Pointer(syscall.StringToUTF16Ptr(title))), 0, 0)
-	syscall.FreeLibrary(kernel32)
-
+	// 
 	fmt.Println("成功 (: ")
 }
 
