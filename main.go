@@ -182,11 +182,11 @@ func downloadImage(url string, path string) {
 	_ = ioutil.WriteFile(path, body, 0755)
 }
 
-func init() {
-	fmt.Println("初始中...")
-	// 
-	fmt.Println("成功 (: ")
-}
+// func init() {
+// 	fmt.Println("初始中...")
+// 	// 
+// 	fmt.Println("成功 (: ")
+// }
 
 func main() {
 	log.SetPrefix("[rxxcy] ")
